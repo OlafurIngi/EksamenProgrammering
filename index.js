@@ -1,5 +1,4 @@
-
-// Her require vi Express
+// We require express
 const express = require("express");
 const app = express();
 
