@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   
   document.getElementById("logout").addEventListener("submit", (event) => {
     event.preventDefault();
-    Storage.removeItem("user");
+    localStorage.removeItem("user");
     location.href = "login.html";
   });
 

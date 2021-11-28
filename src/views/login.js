@@ -1,3 +1,5 @@
+// ÆNDRE
+
 document.addEventListener("DOMContentLoaded", (event) => {
     const user = localStorage.getItem("user");
     if (user) {
@@ -29,11 +31,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
             localStorage.setItem("user", JSON.stringify(user));
             location.href = "/";
           } else {
-            window.alert("Oplysninger forkert");
+            window.alert("Wrong information");
           }
         })
         .catch(() => {
-          window.alert("Der skete en fejl");
+          window.alert("Error");
         });
     });
   });
