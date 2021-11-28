@@ -2,8 +2,8 @@
 
 document.addEventListener("DOMContentLoaded", (event) => {
   // Here we define form
-    //const form = document.getElementById("form ");
-    document.getElementById("form ").addEventListener("submit", (event) => {
+  const form = document.getElementById("form ")
+  form.addEventListener("submit", (event) => {
         // Prevent any default action
         event.preventDefault();
         // defining email and password by their ID in the form
@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
         body: JSON.stringify(user), 
         }) 
         // If response is found go to login.html, if not, prompt error.
-        .then((res) => res.json())
-        .then((res) => {
-          if (res) {
+        .then((response) => response.json())
+        .then((response) => {
+          if (response) {
             location.href = "/login.html";
           }
         })
@@ -35,4 +35,4 @@ document.addEventListener("DOMContentLoaded", (event) => {
           window.alert("Error")
         });
   });
-});
+}); 
