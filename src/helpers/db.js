@@ -20,6 +20,7 @@ class DB {
 
  // Method to login from the database
  saveUser(user) {
+     // This method pushes the user to the "database"
     this.users.push(user);
     this.saveFile(userFile, JSON.stringify(this.users));
   }

@@ -11,4 +11,17 @@ app.listen(PORT, () => {
     console.log("Server is running on port " + PORT );
 })
 
-// controllers
+// Controllers
+const userControl = require("./src/controllers/user-controller");
+
+// Routes for the userControl const
+app.use("/users", userControl);
+
+// Middleware
+app.use(express.static("./src/views"));
+
+// Makes so, that the string becomes JSON format
+app.use(express.json());
+
+// Routes
+app.use("/users", userControl);
