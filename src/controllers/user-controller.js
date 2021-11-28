@@ -19,3 +19,5 @@ router.post("/create", (req, res) => {
     db.deleteUser(user);
     res.status(200).send(true);
   });
+
+  module.exports = router ;

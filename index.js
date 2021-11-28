@@ -1,6 +1,7 @@
 // We require express
 const express = require("express");
 const app = express();
+const router = express.Router();
 
 
 
@@ -20,8 +21,10 @@ app.use("/users", userControl);
 // Middleware
 app.use(express.static("./src/views"));
 
-// Makes so, that the string becomes JSON format
+// Middleware which decodes the body that is coming in
 app.use(express.json());
 
 // Routes
 app.use("/users", userControl);
+
+module.exports = router ;
